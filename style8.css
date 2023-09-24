@@ -1,0 +1,55 @@
+.novbar{
+    background-color: black;
+    padding: 10px 0px;     /* ដាក់ logo កុំឲ្យជាប់ novbar ពេក */
+}
+.container{
+    display: flex;         /* display: flex; : ដើម្បីឲ្យ logo and menu ​រត់ជាជួរដេក */
+    justify-content: space-between; /* សម្រាប់ឲ្យ logo and menu have space */
+    align-items: center;
+    max-width: 80%;        
+    margin: 0px auto;      /* margin: (លើក្រោម)​ (ឆ្វេងស្តាំ) ; note: auto វាបែងចែកម្នាក់ 10% ពី max-width:80%; នៅកណ្តាល​ */
+}
+.nav-links{
+    display: flex;
+    list-style: none;      /* សម្រាប់បំបាត់ គ្រាប់ចុចនៅក្នុង tage <li> */
+}
+.nav-links li{
+    margin-right: 20px;    /* ដាក់ឲ្យ default menu ដឃ្លាពីគ្នា */
+}
+.nav-links li a{
+    text-decoration: none; /* បិទប្រទាត់នៅក្រោម links*/
+    color: white;
+    font-size: 20px;
+    transition: color 0.6s; /* កំណត់ឲ្យ hover ដើរយឺត​បង្ក់ើតរាង smooth​*/
+}
+.nav-links li a:hover{
+    color: red;
+    /* note: ពេល responesive(inspect) យើងចុចលើវាទើបចេញស្រមោល */
+}
+*{ /* កំណត់ឲ្យ​ webpage ទាំងមូល */
+    margin: 0px;           /* ដាក់ margin ឲ្យជាប់ផ្ទាង webpage */
+
+}
+.phone-menu{
+    display: none;         /* បើនៅលើ computer គឺវាបាត់​ bar phone */
+}
+.bar{ 
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0px;       /* ដាក់ឲ្យ្ចចេញជា​ bar បន្ទាត់ទ្រេ៣ */
+}
+
+@media (max-width: 768px){ /* ដាក់បំបាត់ default memu or phone-menu(bar) នៅពេល screen មានទំហំធំជាង 768 */
+    .nav-links{            /* phone : វាចេញ phone_menu(bar)​  */
+        display: none;
+    }
+    .phone-menu{            /* computer: វាចេញ default menu(text) */
+        display: flex;      /* ឲ្យវា​ display flex ជាជួរដេកសិនហើយចាំ flex ទៅជាជួរឈរ column  */
+        flex-direction: column; /* ឲ្យ bar ចេញ 3 ទ្រេវិញ */
+    }
+}
+.content h1{
+    text-align: center;
+    font-size: 50px;
+}
